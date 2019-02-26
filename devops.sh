@@ -1,17 +1,18 @@
 #!/bin/bash
 
+#0.Arguments
 ARG=($@)
 CMD=`git pull`
 PARAM1=${ARG[0]}
 PARAM2=${ARG[1]}
 
-
+#[BUILD]
 if [[ "$PARAM1" =~ "build" ]]; then
 	#1. if source is not changed, build stop
-	#if [[ "$CMD" =~ "Already up-to-date." ]]; then
-	#	echo "changed Nothing!"
-	#	exit 1;
-	#fi
+	if [[ "$CMD" =~ "Already up-to-date." ]]; then
+		echo "changed Nothing!"
+		#exit 1;
+	fi
 
 	#2. gradle build
 	#3. Dockerfile image build
@@ -21,6 +22,7 @@ if [[ "$PARAM1" =~ "build" ]]; then
 		CMD=`docker tag docker_spring:$NOW docker_spring:latest`
 		echo "build success!"
 	fi
+#[DEPLOY]
 elif [[ "$PARAM1" =~ "deploy" ]]; then
 	if [[ -n "$PARAM2" ]]; then
 		TAG=$PARAM2
@@ -34,7 +36,6 @@ elif [[ "$PARAM1" =~ "deploy" ]]; then
 			CMD=`env TAG=$TAG docker stack deploy -c docker-compose_blue.yml blue`
 			sleep 60
 			CMD=`docker stack rm green`
-			#CMD=`docker stop $(docker ps -a -f 'name=green_app' -q)`
 			echo "blue app container loaded"
 		#4-2. docker stack deploy (green)
 		else
@@ -42,7 +43,6 @@ elif [[ "$PARAM1" =~ "deploy" ]]; then
 			CMD=`env TAG=$TAG docker stack deploy -c docker-compose_green.yml green`
 		        sleep 60
 			CMD=`docker stack rm blue`
-		        #CMD=`docker stop $(docker ps -a -f 'name=blue_app' -q)`
 			echo "green app container loaded"
 		fi
 		sleep 15
@@ -50,13 +50,16 @@ elif [[ "$PARAM1" =~ "deploy" ]]; then
 	
 #5. all container restart
 elif [[ "$PARAM1" =~ "restart" ]]; then
-	CMD=`docker restart $(docker ps -a -q)`
+	CMD=`docker restart $(docker ps --filter 'status=running' -a -q)`
+	echo "docker container restared!"
 #6. all container stop
 elif [[ "$PARAM1" =~ "stop" ]]; then
-	CMD=`docker stop $(docker ps -a -q)`
+	CMD=`docker stop $(docker ps --filter 'status=running' -a -q)`
+	echo "docker container stopped!"
 #7. all container start
 elif [[ "$PARAM1" =~ "start" ]]; then
-	CMD=`docker start $(docker ps -a -q)`
+	CMD=`docker start $(docker ps --filter 'status=exited' -a -q)`
+	echo "docker contaeiner stared!"
 
 else	
 	echo "Undefined Command!"

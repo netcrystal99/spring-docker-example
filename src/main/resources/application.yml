@@ -5,8 +5,9 @@ info:
     java.source: \${java.version}
     java.target: \${java.version}
 logging:
+  file: logs/application-debug.log
   level:
-    io.honeymon.boot.springboot: DEBUG
+    kakaopay.com.boot.springboot: DEBUG
 server:
   port: 8081
 # ExampleProperties

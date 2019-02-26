@@ -76,7 +76,7 @@ link:https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
   태그 날짜를 입력하지 않으면, latest로 배포가 됩니다. 
 <hr>
 
-### [배포]
+### [컨테이너 ]
 > 명령 : ./devops restart|start|stop [option]
 
   [option] : app name(blue/green) [required]

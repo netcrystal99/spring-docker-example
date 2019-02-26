@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.service;
+package kakaopay.com.boot.springboot.service;
 
 
 import javax.annotation.PostConstruct;
@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.honeymon.boot.springboot.config.ExampleProperties;
+import kakaopay.com.boot.springboot.config.ExampleProperties;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

@@ -1,12 +1,12 @@
-package io.honeymon.boot.springboot.service;
+package kakaopay.com.boot.springboot.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.honeymon.boot.springboot.domain.User;
-import io.honeymon.boot.springboot.domain.UserRepository;
+import kakaopay.com.boot.springboot.domain.User;
+import kakaopay.com.boot.springboot.domain.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {

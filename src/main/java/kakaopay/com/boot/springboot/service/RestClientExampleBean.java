@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.service;
+package kakaopay.com.boot.springboot.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;

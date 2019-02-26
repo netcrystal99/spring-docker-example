@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.api;
+package kakaopay.com.boot.springboot.api;
 
 import java.util.Optional;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.honeymon.boot.springboot.domain.User;
-import io.honeymon.boot.springboot.service.UserService;
+import kakaopay.com.boot.springboot.domain.User;
+import kakaopay.com.boot.springboot.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

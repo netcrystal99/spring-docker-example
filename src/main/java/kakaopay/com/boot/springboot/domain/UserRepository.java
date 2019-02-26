@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.domain;
+package kakaopay.com.boot.springboot.domain;
 
 import java.util.List;
 

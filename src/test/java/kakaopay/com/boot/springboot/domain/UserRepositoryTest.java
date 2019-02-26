@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.domain;
+package kakaopay.com.boot.springboot.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.view.annotation;
+package kakaopay.com.boot.springboot.view.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

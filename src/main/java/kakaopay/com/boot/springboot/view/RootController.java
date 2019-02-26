@@ -1,8 +1,8 @@
-package io.honeymon.boot.springboot.view;
+package kakaopay.com.boot.springboot.view;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
-import io.honeymon.boot.springboot.view.annotation.ViewController;
+import kakaopay.com.boot.springboot.view.annotation.ViewController;
 
 @ViewController
 public class RootController {

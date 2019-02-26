@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.runner;
+package kakaopay.com.boot.springboot.runner;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

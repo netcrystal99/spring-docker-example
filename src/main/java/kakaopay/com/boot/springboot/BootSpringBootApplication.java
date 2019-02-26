@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot;
+package kakaopay.com.boot.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;

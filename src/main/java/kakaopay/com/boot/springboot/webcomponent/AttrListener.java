@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.webcomponent;
+package kakaopay.com.boot.springboot.webcomponent;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

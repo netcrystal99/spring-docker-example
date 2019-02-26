@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.config;
+package kakaopay.com.boot.springboot.config;
 
 import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
 import org.springframework.context.annotation.Bean;

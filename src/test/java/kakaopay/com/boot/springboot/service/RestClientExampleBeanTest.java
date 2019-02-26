@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot.service;
+package kakaopay.com.boot.springboot.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import io.honeymon.boot.springboot.service.RestClientExampleBean.Post;
+import kakaopay.com.boot.springboot.service.RestClientExampleBean.Post;
 
 @ActiveProfiles("test")
 @RunWith(SpringRunner.class)

@@ -1,4 +1,4 @@
-package io.honeymon.boot.springboot;
+package kakaopay.com.boot.springboot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

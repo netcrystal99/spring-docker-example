@@ -58,8 +58,8 @@ git clone https://github.com/wonizz/spring-docker-example
 
 ### [NGINX]
 github 에 올라가있는 nginx 경로에서 아래의 내용 수행
- >도커이미지빌드 : docker build -t nginx_spring .
- >도커 container 생성 : docker run --name nginx-spring -d -p 80:80 -p 443:443 nginx_spring
+ 도커이미지빌드 : docker build -t nginx_spring .
+ 도커 container 생성 : docker run --name nginx-spring -d -p 80:80 -p 443:443 nginx_spring
 
 nginx 는 단순 proxy 역할로 volume 마운트는 하지 않았습니다. 
 

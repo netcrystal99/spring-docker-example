@@ -52,6 +52,14 @@ link:https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
 		생성된 docker image를 기반으로 compose yml 파일로 배포를 수행한다. 
 
 ## [사용법]
+
+### [NGINX]
+github 에 올라가있는 nginx 경로에서 아래의 내용 수행
+ >도커이미지빌드 : docker build -t nginx_spring .
+ >도커 container 생성 : docker run --name nginx-spring -d -p 80:80 -p 443:443 nginx_spring
+
+nginx 는 단순 proxy 역할로 volume 마운트는 하지 않았습니다. 
+
 ### [빌드]
 모든 내용은 프로젝트 내에 devops.sh에 작성되어있습니다. 
  >명령 : ./devops build

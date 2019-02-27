@@ -65,7 +65,7 @@ github 에 올라가있는 nginx 경로에서 아래의 내용 수행
 
 ### [빌드]
 모든 내용은 프로젝트 내에 devops.sh에 작성되어있습니다. 
- >명령 : ./devops build
+ >명령 : ./devops.sh build
  
  빌드 수행시 현재의 경로에서 ``그레이들 빌드``를 수행하여, build > libs 경로에 jar 파일을 생성합니다. 
  이후에, ``도커 이미지 빌드``를 수행하여 도커 이미지를 생성합니다.
@@ -80,7 +80,7 @@ github 에 올라가있는 nginx 경로에서 아래의 내용 수행
 
 ### [배포]
 
-  > 명령 : ./devops deploy [option]
+  > 명령 : ./devops.sh deploy [option]
 
   [option] : tag날짜 (optional)
   tag날짜는 ``docker images``로 확인이 가능합니다.
@@ -88,7 +88,7 @@ github 에 올라가있는 nginx 경로에서 아래의 내용 수행
 <hr>
 
 ### [컨테이너 ]
-> 명령 : ./devops restart|start|stop [option]
+> 명령 : ./devops.sh restart|start|stop [option]
 
   [option] : app name(blue/green) [required]
   현재 도커 서비스가 되고 있는 app을 중지,시작,재시작이 가능합니다.

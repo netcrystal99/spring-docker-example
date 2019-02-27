@@ -1,9 +1,11 @@
 version: "3"
+volumes:
+  app_logs: {}
 services:
   app:
     image: docker_spring:${TAG}
     volumes:
-      - /private/logs_blue:/logs
+      - app_logs:/logs
     deploy:
       replicas: 2
       restart_policy:

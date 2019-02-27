@@ -53,6 +53,9 @@ link:https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html
 
 ## [사용법]
 
+### [git clone]
+git clone https://github.com/wonizz/spring-docker-example
+
 ### [NGINX]
 github 에 올라가있는 nginx 경로에서 아래의 내용 수행
  >도커이미지빌드 : docker build -t nginx_spring .

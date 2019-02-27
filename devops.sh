@@ -49,18 +49,27 @@ elif [[ "$PARAM1" =~ "deploy" ]]; then
 		CMD=`docker rm $(docker ps --filter 'status=exited' -a -q)`
 	
 #5. all container restart
-elif [[ "$PARAM1" =~ "restart" ]]; then
-	CMD=`docker restart $(docker ps --filter 'status=running' -a -q)`
-	echo "docker container restared!"
-#6. all container stop
-elif [[ "$PARAM1" =~ "stop" ]]; then
-	CMD=`docker stop $(docker ps --filter 'status=running' -a -q)`
-	echo "docker container stopped!"
-#7. all container start
-elif [[ "$PARAM1" =~ "start" ]]; then
-	CMD=`docker start $(docker ps --filter 'status=exited' -a -q)`
-	echo "docker contaeiner stared!"
-
+elif [[ "$PARAM1" =~ "restart" ]] || [[ "$PARAM1" =~ "stop" ]] ||  [[ "$PARAM1" =~ "start" ]]; then
+	if [[ "$PARAM2" =~ "blue" ]] ||  [[ "$PARAM2" =~ "green" ]]; then	
+		if [[ "$PARAM1" =~ "restart" ]]; then
+			CMD=`docker service rm  $PARAM2"_app"`
+			sleep 60
+			CMD=`env TAG=latest docker stack deploy -c docker-compose_$PARAM2.yml $PARAM2`
+			echo "docker container restared!"
+		#6. all container stop
+		elif [[ "$PARAM1" =~ "stop" ]]; then
+			CMD=`docker service rm  $PARAM2"_app"`
+			sleep 30
+			echo "docker container stopped!"
+		#7. all container start
+		elif [[ "$PARAM1" =~ "start" ]]; then
+			CMD=`env TAG=latest docker stack deploy -c docker-compose_$PARAM2.yml $PARAM2`
+			sleep 30
+			echo "docker contaeiner stared!"
+		fi
+	else
+		echo "blue or green app only applied!"
+	fi
 else	
 	echo "Undefined Command!"
 fi

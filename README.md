@@ -3,7 +3,7 @@ Wonizz, <growuplove7@naver.com>
 v0.0.1, 2019-02-26
 
 ## [Assignment]
- * link:https://blog.wonizz.tk/2019/02/26/devops-%EC%82%AC%EC%A0%84-%EA%B3%BC%EC%A0%9C/
+ * link: https://blog.wonizz.tk/2019/02/26/devops-assign/
  
  
 안녕하세요, 워니즈입니다.
